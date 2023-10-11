@@ -1,4 +1,4 @@
-import { logger } from '@services/servers';
+import { logger } from '@services/server';
 import { config } from '@config/config';
 
 const Sequelize = require('sequelize');
