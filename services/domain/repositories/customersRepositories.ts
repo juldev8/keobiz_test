@@ -1,4 +1,4 @@
-import sequelizeClient from '@services/infrastrucre/sequelizeClient';
+import sequelizeClient from '@services/infrastructure/sequelizeClient';
 import { QueryTypes } from 'sequelize';
 import * as Neverthrow from 'neverthrow';
 
