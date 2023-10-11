@@ -15,3 +15,8 @@ export const httpPostRequest = (url: string, payload:any) => {
   const response = request(server).post(url).send(payload);
   return response;
 };
+
+export const httpUpdateRequest = (url: string, payload:any) => {
+  const response = request(server).put(url).send(payload);
+  return response;
+};
