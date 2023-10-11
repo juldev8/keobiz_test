@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "check:duplicationId": "ts-node services/domain/shared/utils/returnDuplicateCustomersId.ts",
     "start:dev": "nodemon index.ts",
     "test:integration": "jest --runInBand --config ./jest-config.json --forceExit --testTimeout=20000"
   },
