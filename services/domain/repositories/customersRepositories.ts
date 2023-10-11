@@ -20,6 +20,20 @@ export const create = async ({ payload }:any): Promise<any[]| any > => {
     return Neverthrow.err(e);
   }
 };
+export const delete_ = async ({ customerId }:any): Promise<any[]| any > => {
+  try {
+    const customer = await sequelizeClient.query(
+      `DELETE
+       FROM clients
+       WHERE clients.id = ${customerId}
+       `,
+      { type: QueryTypes.DELETE },
+    );
+    return Neverthrow.ok(customer);
+  } catch (e) {
+    return Neverthrow.err(e);
+  }
+};
 
 export const selectCustomer = async ({ customerId }:any): Promise<any[]| any > => {
   try {
