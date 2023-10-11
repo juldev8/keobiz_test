@@ -1,0 +1,18 @@
+{
+    "moduleNameMapper": {
+        "@config/(.*)" : "<rootDir>/config/$1",
+        "@controllers/(.*)" : "<rootDir>/controllers/$1",
+        "@repositories/(.*)" : "<rootDir>/repositories/$1",
+        "@routes/(.*)" : "<rootDir>/routes/$1",
+        "@services/(.*)" : "<rootDir>/services/$1",
+        "@tests/(.*)" : "<rootDir>/tests/$1"
+    },
+    "modulePathIgnorePatterns": ["<rootDir>/build"],
+    "moduleFileExtensions": ["js", "ts"],
+    "rootDir": ".",
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+      "testPathIgnorePatterns" : ["<rootDir>/build"]
+  }
