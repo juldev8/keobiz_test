@@ -1,4 +1,5 @@
 import express, { Express } from 'express';
+import { mainRouter } from '@routes/mainRouter';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import pino from 'pino';
 import bodyParser from 'body-parser';
@@ -7,6 +8,8 @@ export const server = express();
 
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
+
+server.use('/api', mainRouter);
 
 export const logger = pino();
 
