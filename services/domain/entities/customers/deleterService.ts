@@ -1,5 +1,5 @@
 import * as Neverthrow from 'neverthrow';
-import * as CustomersRepository from '@services/domain/repositories/customersRepositories';
+import * as CustomersRepository from '@services/domain/repositories/customersRepository';
 import { neverthrowForbiddenError } from '@services/domain/errors/neverthrowErrorsReturn';
 
 export const deleteFromHttp = async ({ customerId }: any) => {

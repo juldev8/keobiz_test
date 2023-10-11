@@ -1,5 +1,5 @@
 import { schemaCustomers } from '@services/domain/validators/customers';
-import * as CustomersRepository from '@services/domain/repositories/customersRepositories';
+import * as CustomersRepository from '@services/domain/repositories/customersRepository';
 import * as Neverthrow from 'neverthrow';
 import { neverthrowForbiddenError, neverthrow422ErrorValidator } from '@services/domain/errors/neverthrowErrorsReturn';
 
