@@ -57,3 +57,23 @@ export const selectCustomers = async (): Promise<any[]| any > => {
     return Neverthrow.err(e);
   }
 };
+
+export const update = async ({ customerId, payload }:any): Promise<any[]| any > => {
+  const { firstName, lastName } = payload;
+
+  try {
+    const customer = await sequelizeClient.query(
+      `UPDATE clients
+       SET clients.first_name = '${firstName}',
+       clients.last_name = '${lastName}'
+       WHERE clients.id = ${customerId}
+       `,
+      { type: QueryTypes.UPDATE },
+    );
+    return customer[1]
+      ? Neverthrow.ok({ customer: { id: customer[0], firstName, lastName } })
+      : Neverthrow.err(customer[0]);
+  } catch (e) {
+    return Neverthrow.err(e);
+  }
+};
