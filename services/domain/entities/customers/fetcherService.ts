@@ -1,6 +1,6 @@
 import * as CustomersRepository from '@services/domain/repositories/customersRepositories';
 import * as Neverthrow from 'neverthrow';
-import { neverthrowForbiddenError } from '@services/domain/errors/nerverthrowErrorsReturn';
+import { neverthrowForbiddenError } from '@services/domain/errors/neverthrowErrorsReturn';
 import * as Flows from '@services/domain/errors/class/notEntityFound';
 
 export const getCustomer = async ({ customerId }: any): Promise<any> => {
